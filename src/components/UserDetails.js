@@ -1,7 +1,9 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import "./userDetails.css"
+import React from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import "./userDetails.css";
+import { Link } from "react-router-dom";
+
 const UserDetails = () => {
   const { id } = useParams();
   const users = useSelector((state) => state.users);
@@ -12,15 +14,22 @@ const UserDetails = () => {
   }
 
   return (
-    <div>
-      <h2>User Details</h2>
-      <img src={user.avatar} alt="User Avatar" />
-      <p>
-        <strong>Name:</strong> {user.first_name} {user.last_name}
-      </p>
-      <p>
-        <strong>Email:</strong> {user.email}
-      </p>
+    <div className="container">
+      <div className="details-card">
+        <img src={user.avatar} class="card-img-top user-img" alt="..." />
+        <div className="card-body">
+          <p className="card-text details-text">
+            {user.first_name} {user.last_name} <br />
+            {user.email}
+          </p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-details">
+        {" "}
+        <Link to="/" className="link-class">
+          Back to User List
+        </Link>
+      </button>
     </div>
   );
 };

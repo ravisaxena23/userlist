@@ -1,0 +1,22 @@
+.details-card {
+    width: 18rem;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.user-img {
+    border-radius: 5px;
+}
+
+.details-text {
+    padding: 10px;
+}
+
+.link-class {
+    color: #fafafa;
+}
+
+.btn-details {
+    margin: 10px
+}
