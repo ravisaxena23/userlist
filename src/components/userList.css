@@ -1,0 +1,10 @@
+a {
+    text-decoration: none;
+    color: #24232E;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
